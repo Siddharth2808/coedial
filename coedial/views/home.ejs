@@ -1,4 +1,30 @@
 
-        <h1>
-            Codeial / <%= title %>
-        </h1>
+<h1>
+    Codeial / <%= title %>
+</h1>
+
+<%if(locals.user) {%>
+    <section id="feed-posts">
+        <h4>Posts</h4>
+        <form action="/posts/create" id="new-post-form" method="POST">
+            <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
+            <input type="submit" value="Post">
+        </form>
+    </section>
+<%}%>
+
+<h2>Posts</h2>
+<ul>
+<% for (let i of post_list) {%>
+    <h3 id="this-line">
+        
+        <li>
+            <p><%= i.content%></p>
+            <p>Author : <%= i.user.name%></p>
+        </li>
+            
+    </h3>
+
+<%}%>
+
+</ul>
