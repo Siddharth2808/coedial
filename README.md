@@ -1,0 +1,6 @@
+# coedial
+A simple blog website...
+
+First Major Project of mine...
+
+It is used in other projects like Team-clone, Vichar and Gamespace.
